@@ -24,7 +24,7 @@ public class DbHelper {
         statement.setString(1, name);
         statement.setString(2, description);
 
-        statement.execute();
+        statement.executeUpdate();
         ResultSet set = statement.getGeneratedKeys();
         set.next();
         return set.getInt("id");
@@ -102,7 +102,7 @@ public class DbHelper {
         statement.setString(7, url);
         statement.setInt(8, companyId);
 
-        statement.execute();
+        statement.executeUpdate();
         ResultSet set = statement.getGeneratedKeys();
         set.next();
         return set.getInt("id");
